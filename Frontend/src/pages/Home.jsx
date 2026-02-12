@@ -48,22 +48,22 @@ const Home = () => {
     }, []);
 
     return (
-        <Container className="mt-5">
-            <Row className="mb-4 align-items-center">
-                <Col>
+        <Container className="mt-5 text-center">
+            <div className="mb-4 align-items-center">
+                <div>
                     <h2 className="fw-bold">Welcome, {loggedInUser}</h2>
-                </Col>
-                <Col className="text-end">
+                </div>
+                <div className="text-center">
                     <Button variant="danger" onClick={handleLogout}>
                         Logout
                     </Button>
-                </Col>
-            </Row>
+                </div>
+            </div>
 
-            <Row>
+            <div className="text-center">
                 {product.map((item) => (
-                    <Col md={4} className="mb-4" key={item._id}>
-                        <Card className="shadow-sm">
+                    <div md={4} className="mb-4" key={item._id}>
+                        <Card className="shadow-sm w-50 p-3">
                             <Card.Body>
                                 <Card.Title>{item.name}</Card.Title>
                                 <Card.Text>
@@ -74,10 +74,9 @@ const Home = () => {
                                 </Button>
                             </Card.Body>
                         </Card>
-                    </Col>
+                    </div>
                 ))}
-            </Row>
-
+            </div>
             <ToastContainer />
         </Container>
     );

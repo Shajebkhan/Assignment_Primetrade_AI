@@ -33,6 +33,7 @@ const Login = () => {
       const url = "http://localhost:5000/auth/login";
 
       const response = await axios.post(url, loginInfo);
+      console.log(response, "response");
 
       const { success, message, name, jwtToken } = response.data;
 

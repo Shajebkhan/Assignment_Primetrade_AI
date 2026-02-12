@@ -2,7 +2,7 @@ const express = require('express');
 const { ensuredAuth } = require('../middleware/Auth');
 const router = express.Router();
 
-router.get('/', ensuredAuth, (req,res)=> {
+router.get('/', ensuredAuth, (req, res) => {
     res.status(200).json([
         {
             name: "mobile",
@@ -13,6 +13,5 @@ router.get('/', ensuredAuth, (req,res)=> {
             price: 20000
         }
     ])
-} )
-
+})
 module.exports = router;
